@@ -1,0 +1,18 @@
+.headerTop {
+  background-color: black;
+  color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.headerTop .ShowNow {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.containeSelect {
+  position: absolute;
+  right: 80px;
+}
