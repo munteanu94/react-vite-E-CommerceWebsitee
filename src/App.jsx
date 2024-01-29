@@ -1,13 +1,14 @@
-import ReactDOM from "react-dom/client";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Header from "./componente/Header/Header";
-
+import Header from "./componente/Header/Header.jsx";
+import Footer from "./componente/footer/footer.jsx";
+import "./App.css";
 function App() {
   return (
     <>
-      <Header />
+      <div className="mainContainer">
+        <Header />
+        <Footer />
+      </div>
     </>
   );
 }
