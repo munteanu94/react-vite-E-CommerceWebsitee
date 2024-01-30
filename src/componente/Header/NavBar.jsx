@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { BiCartAlt } from "react-icons/bi";
+
 import "./NavBar.css";
 
 export default function NavBar() {
@@ -11,7 +12,7 @@ export default function NavBar() {
         <h2 className="logo">Exclusive</h2>
         <ul className="ulList">
           <li>
-            <NavLink className="link" to="/">
+            <NavLink className="link" to="/Home">
               Home
             </NavLink>
           </li>

@@ -1,7 +1,13 @@
+import SideBar from "./homeComponente/SideBar.jsx";
+import Slider from "./homeComponente/Slider.jsx";
+import "./Home.css";
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <section className="sectionFirst">
+        <SideBar />
+        <Slider />
+      </section>
     </>
   );
 }

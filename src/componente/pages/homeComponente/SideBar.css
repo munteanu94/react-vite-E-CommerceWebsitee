@@ -1,0 +1,62 @@
+.containerSideBar ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.containerSideBar ul .more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.containerSideBar {
+  border-right: 1px solid silver;
+  padding-top: 30px;
+  position: relative;
+}
+.sidebarClose {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  display: none;
+}
+.sidebarMenu {
+  position: absolute;
+  font-size: 30px;
+  right: -110px;
+  top: 0;
+  display: none;
+}
+@media (max-width: 800px) {
+  .sidebarhide {
+    display: none;
+  }
+  .sidebarMenu {
+    display: block;
+  }
+  .containerSideBar {
+    position: fixed;
+    z-index: 50;
+    left: -140px;
+  }
+  .containerSideBar.open {
+    position: fixed;
+    z-index: 50;
+    left: 0px;
+    background-color: white;
+    width: 250px;
+    padding-left: 20px;
+  }
+  .sidebarMenu.MenuHide {
+    display: none;
+  }
+  .sidebarClose {
+    display: block;
+  }
+}
+@media (max-width: 550px) {
+  .sidebarMenu {
+    right: -50px;
+  }
+}
