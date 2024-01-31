@@ -1,0 +1,53 @@
+.containerSecond {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 80px;
+}
+
+/* style container deadline */
+.containerTimeline .today {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 30px;
+}
+.containerTimeline .today p {
+  color: red;
+  font-weight: 900;
+}
+.containerTimeline .today .rectangle {
+  height: 30px;
+  width: 15px;
+  background-color: red;
+  border-radius: 5px;
+}
+/* style flashSales */
+.flashSales {
+  display: flex;
+  column-gap: 100px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.flashSales h2 {
+  font-size: 30px;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+}
+.flashSales .deadline {
+  display: flex;
+  column-gap: 15px;
+}
+.flashSales .deadline span {
+  font-size: 12px;
+}
+.flashSales .deadline p,
+.flashSales .deadline p span {
+  font-size: 30px;
+  font-weight: 900;
+}
+.flashSales .deadline p span {
+  color: red;
+}
+/* style Slider */
+.containerSlider2 {
+}

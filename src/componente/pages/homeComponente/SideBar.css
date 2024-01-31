@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding-right: 10px;
+  position: relative;
 }
 .containerSideBar {
   border-right: 1px solid silver;
@@ -16,10 +17,11 @@
 }
 .sidebarClose {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 5px;
+  top: 5px;
   font-size: 20px;
   display: none;
+  cursor: pointer;
 }
 .sidebarMenu {
   position: absolute;
@@ -27,7 +29,57 @@
   right: -110px;
   top: 0;
   display: none;
+  cursor: pointer;
 }
+
+.sidebarhide li:hover {
+  color: blueviolet;
+  cursor: pointer;
+}
+/* style woman more */
+.womanfashion {
+  position: absolute;
+  right: -151px;
+  top: 0;
+  background-color: white;
+  color: white;
+  z-index: 30;
+  width: 150px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  display: none;
+}
+.womanfashion a,
+.menFashion a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.womanfashion a:hover,
+.menFashion a:hover {
+  color: blueviolet;
+}
+.more:hover .womanfashion {
+  display: initial;
+}
+/* style men fashion */
+.menFashion {
+  position: absolute;
+  right: -151px;
+  top: -20px;
+  background-color: white;
+  color: white;
+  z-index: 30;
+  width: 150px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  display: none;
+}
+.more:hover .menFashion {
+  display: initial;
+}
+
 @media (max-width: 800px) {
   .sidebarhide {
     display: none;
@@ -35,6 +87,7 @@
   .sidebarMenu {
     display: block;
   }
+
   .containerSideBar {
     position: fixed;
     z-index: 50;

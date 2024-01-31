@@ -1,0 +1,90 @@
+.containerCart {
+}
+
+.containerCart .containerImg {
+  background-color: whitesmoke;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.containerImg:hover .ContainerAdd {
+  display: block;
+}
+.containerImg:hover .icon {
+  transform: scale(1.2);
+}
+.ContainerAdd {
+  background-color: black;
+  font-size: 20px;
+
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+}
+.containerCart .containerImg .ContainerAdd .btnAdd {
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0px;
+  background-color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.containerCart .containerImg .sales {
+  background-color: red;
+  position: absolute;
+  padding: 3px 6px;
+  border-radius: 4px;
+  top: 10px;
+  left: 10px;
+}
+.containerCart .containerImg img {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+.containerCart .containerImg .icon {
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 1s;
+}
+.containerCart .containerImg .eyes {
+  top: 50px;
+}
+.textCart {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.textCart h5 {
+  margin-top: 15px;
+}
+.textCart .cartprice {
+  opacity: 0.6;
+}
+.textCart .cartprice strike {
+  margin-left: 20px;
+}
+.textCart .feedback {
+  display: flex;
+  column-gap: 10px;
+}
+.textCart .feedback div {
+  color: rgb(177, 236, 61);
+}
