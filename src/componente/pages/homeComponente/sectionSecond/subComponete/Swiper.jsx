@@ -16,7 +16,6 @@ export default function SliderCart({
     <div className="sliderCart">
       <div className="containerCart">
         <div className="containerImg">
-          <img src={image} alt="cart" />
           <div className="sales">-{sale}%</div>
           <div className="icon heart">
             <FaRegHeart />
