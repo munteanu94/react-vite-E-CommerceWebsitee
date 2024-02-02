@@ -90,28 +90,10 @@
   color: orange;
 }
 
-.swiperTwo {
-  overflow: visible;
-  position: relative;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: absolute;
-
-  background-color: whitesmoke;
-  top: -20px;
-  z-index: 100;
-  width: 43px;
-  height: 43px;
-  border-radius: 100%;
-  right: 40px;
-  top: -75px;
-}
-.swiper-button-prev {
+/* .swiper-button-prev {
   right: 100px;
-}
-.swiper-button-prev::after,
+} */
+/* .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 25px;
   width: 100%;
@@ -121,17 +103,17 @@
   justify-content: center;
   z-index: 10000;
   color: black;
-}
-.swiper-button-next::after {
+} */
+/* .swiper-button-next::after {
   content: "→";
 }
 .swiper-button-prev::after {
   content: "←";
-}
-.swiper-button-prev:hover,
+} */
+/* .swiper-button-prev:hover,
 .swiper-button-next:hover {
   transform: scale(1.2);
   font-weight: 900;
   border: 1px solid black;
   cursor: pointer;
-}
+} */

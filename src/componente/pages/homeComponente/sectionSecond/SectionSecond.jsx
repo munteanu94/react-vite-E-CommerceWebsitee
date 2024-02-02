@@ -6,6 +6,7 @@ export default function SectionSecond() {
   return (
     <section className="containerSecond">
       <DeadLine />
+
       <SliderSales />
       <ButtonAll />
     </section>

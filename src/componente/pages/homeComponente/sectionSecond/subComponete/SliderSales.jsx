@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import "../SectionSecond.css";
 import "swiper/css";
+import "swiper/css/navigation";
 import { carts } from "./ListCart.js";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
