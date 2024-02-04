@@ -1,0 +1,12 @@
+.containerButton {
+  margin: 80px 0px;
+  display: flex;
+  justify-content: center;
+}
+.btnProducts {
+  padding: 10px 20px;
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}

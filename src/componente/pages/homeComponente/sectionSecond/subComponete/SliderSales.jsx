@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-
+import "./btnSlide.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 
