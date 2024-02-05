@@ -1,5 +1,5 @@
 import ButtonAll from "../sectionSecond/subComponete/ButtonAll.jsx";
-import "./Bestselling.css";
+import "./BestSelling.css";
 import { FaStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
