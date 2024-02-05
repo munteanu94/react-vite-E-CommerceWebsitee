@@ -3,23 +3,24 @@
   flex-direction: column;
   margin: 50px 80px;
   position: relative;
+  border-bottom: 1px solid silver;
 }
 
 /* style container deadline */
 .containerTimeline {
   position: absolute;
 }
-.containerTimeline .today {
+.today {
   display: flex;
   align-items: center;
   column-gap: 20px;
   margin-bottom: 30px;
 }
-.containerTimeline .today p {
+.today p {
   color: red;
   font-weight: 900;
 }
-.containerTimeline .today .rectangle {
+.today .rectangle {
   height: 30px;
   width: 15px;
   background-color: red;

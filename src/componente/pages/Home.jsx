@@ -1,6 +1,8 @@
 import SideBar from "./homeComponente/SideBar.jsx";
 import Slider from "./homeComponente/Slider.jsx";
 import SectionSecond from "./homeComponente/sectionSecond/SectionSecond.jsx";
+import BrowseCategory from "./homeComponente/sectionFird/BrowseCategory.jsx";
+import BestSelling from "./homeComponente/sectionFour/BestSelling.jsx";
 import "./Home.css";
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
         <Slider />
       </section>
       <SectionSecond />
+      <BrowseCategory />
+      <BestSelling />
     </>
   );
 }

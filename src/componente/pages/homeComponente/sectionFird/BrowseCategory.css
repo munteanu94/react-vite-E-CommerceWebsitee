@@ -1,0 +1,38 @@
+.containerFird {
+  position: relative;
+  margin: 0px 80px;
+  border-bottom: 1px solid silver;
+}
+
+.containerTitle {
+  position: absolute;
+  top: 20px;
+}
+.containerTitle h2 {
+  font-size: 30px;
+  word-spacing: 10px;
+  letter-spacing: 3px;
+}
+.containerFird .containerCart {
+  border: 1px solid silver;
+  padding: 50px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  cursor: pointer;
+}
+.containerFird .containerCart:hover {
+  background-color: red;
+  color: white;
+}
+.containerFird .containerCart img {
+  color: white;
+  width: 80px;
+  height: 80px;
+}
+.containerSlider3 {
+  margin-bottom: 80px;
+}
