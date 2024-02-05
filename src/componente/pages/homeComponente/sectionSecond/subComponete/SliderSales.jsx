@@ -11,8 +11,7 @@ import { carts } from "./ListCart.js";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import Star from "./StarsFeedback.jsx";
-import "./swiper.css";
-
+import "./Swiper.css";
 export default function SliderSales() {
   return (
     <div className="block">
