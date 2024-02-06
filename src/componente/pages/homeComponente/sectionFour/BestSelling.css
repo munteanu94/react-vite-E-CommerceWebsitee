@@ -19,3 +19,28 @@
 .feedback div {
   color: orange;
 }
+@media (max-width: 1185px) {
+  .containerBest {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .containerBest {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .containerBest {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .containerFirst {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+  }
+  .containerFirst .containerButton {
+    align-self: center;
+  }
+}

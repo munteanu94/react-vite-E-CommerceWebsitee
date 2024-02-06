@@ -31,6 +31,29 @@ export default function BrowseCategory() {
           navigation={true}
           modules={[Navigation]}
           className="mySwiper swiperTwo"
+          breakpoints={{
+            1185: {
+              slidesPerView: 6,
+            },
+            1000: {
+              slidesPerView: 5,
+            },
+            800: {
+              slidesPerView: 4,
+            },
+            600: {
+              slidesPerView: 3,
+            },
+            400: {
+              slidesPerView: 2,
+            },
+            300: {
+              slidesPerView: 1,
+            },
+            100: {
+              slidesPerView: 1,
+            },
+          }}
         >
           {category.map((user) => (
             <SwiperSlide key={user.id}>

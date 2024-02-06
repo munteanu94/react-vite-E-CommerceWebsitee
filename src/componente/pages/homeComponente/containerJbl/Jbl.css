@@ -1,0 +1,72 @@
+.containerJbl {
+  margin: 0px 80px 50px;
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: black;
+  color: white;
+  padding: 50px 25px;
+}
+.containerJbl img {
+  width: 100%;
+}
+.containerJbl h5 {
+  color: rgb(2, 248, 2);
+}
+.containerJbl h2 {
+  font-size: 45px;
+}
+.containerJbl .deadLine {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
+  max-width: 60%;
+}
+.containerJbl .deadLine div {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  color: black;
+}
+.containerJbl .deadLine div p {
+  font-size: 12px;
+}
+.containerJbl .bntBuynow {
+  background-color: rgb(2, 248, 2);
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 12px;
+}
+.containerJbl .ContainerBuyNow {
+  margin-top: 20px;
+}
+@media (max-width: 1000px) {
+  .containerJbl h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 790px) {
+  .containerJbl {
+    margin: 0 10px 50px;
+  }
+}
+@media (max-width: 650px) {
+  .containerJbl {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+  .containerJbl .text {
+    margin: 0 auto;
+  }
+  .containerJbl h2 {
+    font-size: 35px;
+  }
+}

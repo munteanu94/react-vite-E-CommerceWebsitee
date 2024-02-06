@@ -23,6 +23,23 @@ export default function SliderSales() {
           navigation={true}
           modules={[Navigation]}
           className="mySwiper swiperTwo"
+          breakpoints={{
+            1185: {
+              slidesPerView: 4,
+            },
+            1000: {
+              slidesPerView: 3,
+            },
+            700: {
+              slidesPerView: 2,
+            },
+            400: {
+              slidesPerView: 1,
+            },
+            100: {
+              slidesPerView: 1,
+            },
+          }}
         >
           {carts.map((user) => (
             <SwiperSlide key={user.id}>

@@ -53,4 +53,36 @@
 .flashSales .deadline p span {
   color: red;
 }
-/* style Slider */
+@media (max-width: 789px) {
+  .containerTimeline {
+    position: relative;
+  }
+  .flashSales {
+    position: relative;
+  }
+}
+@media (max-width: 672px) {
+  .flashSales {
+    column-gap: 20px;
+  }
+  .flashSales .deadline p,
+  .flashSales .deadline p span {
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .flashSales h2 {
+    word-spacing: 0;
+  }
+}
+@media (max-width: 560px) {
+  .containerSecond {
+    margin: 50px 10px;
+  }
+}
+@media (max-width: 430px) {
+  .flashSales {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}

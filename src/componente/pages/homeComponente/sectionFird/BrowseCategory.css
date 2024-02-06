@@ -36,3 +36,18 @@
 .containerSlider3 {
   margin-bottom: 80px;
 }
+@media (max-width: 789px) {
+  .containerTitle {
+    position: relative;
+  }
+}
+@media (max-width: 615px) {
+  .containerTitle {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 615px) {
+  .containerFird {
+    margin: 0px 10px;
+  }
+}

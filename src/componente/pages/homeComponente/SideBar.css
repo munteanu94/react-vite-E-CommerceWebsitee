@@ -89,7 +89,7 @@
   }
 
   .containerSideBar {
-    position: fixed;
+    position: absolute;
     z-index: 50;
     left: -140px;
   }

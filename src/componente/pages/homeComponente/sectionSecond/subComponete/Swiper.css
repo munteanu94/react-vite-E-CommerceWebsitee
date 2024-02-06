@@ -135,3 +135,22 @@
   right: 10%;
 }
 /* style button all */
+@media (max-width: 789px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 27px;
+  }
+  .swiperTwo {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 672px) {
+  .swiper-button-prev {
+    left: 88%;
+  }
+  .swiper-button-next {
+    right: 15%;
+  }
+}
+@media (max-width: 550px) {
+}
