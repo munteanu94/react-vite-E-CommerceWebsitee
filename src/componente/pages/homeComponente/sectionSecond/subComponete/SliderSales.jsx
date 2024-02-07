@@ -60,7 +60,7 @@ export default function SliderSales() {
                   </div>
                   <div>
                     <div className="textCart">
-                      <h5>Havit Hv-G92 Gamepad</h5>
+                      <h5>{user.name}</h5>
                       <div className="cartprice">
                         <span>${user.price}</span>
                         <strike>${user.prastprice}</strike>

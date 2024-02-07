@@ -21,7 +21,8 @@ export default function Star({ stars, reviews }) {
   return (
     <>
       <div className="feedback">
-        {ratingStar}({reviews})
+        {ratingStar}
+        <span>({reviews})</span>
       </div>
     </>
   );

@@ -88,7 +88,10 @@
   display: flex;
   column-gap: 10px;
 }
-.textCart .feedback .icon {
+.textCart .feedback span {
+  color: black;
+}
+.textCart .icon {
   color: orange;
 }
 
