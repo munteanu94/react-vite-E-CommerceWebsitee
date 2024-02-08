@@ -1,0 +1,92 @@
+.containerNewArrival {
+  margin: 0px 80px 50px;
+}
+.containerType {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 300px 300px;
+  gap: 30px;
+  margin-top: 50px;
+}
+.containerType .arrive1 {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: black;
+  position: relative;
+}
+.containerType .arrive1 img {
+  padding-top: 50px;
+}
+.containerType .arrive2 {
+  grid-column: span 2;
+  background-color: black;
+  position: relative;
+}
+.containerType .arrive2 img {
+  float: right;
+}
+.containerType .arrive3,
+.containerType .arrive4 {
+  position: relative;
+  background-color: black;
+}
+
+.containerType img {
+  width: 100%;
+  height: 100%;
+}
+.containerType .arrive3 img,
+.containerType .arrive4 img {
+  padding: 25px;
+}
+.columnArrival {
+  color: white;
+  position: absolute;
+  z-index: 10px;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.columnArrival h4 {
+  font-size: 25px;
+}
+.columnArrival .linkShop {
+  color: white;
+  font-size: 20px;
+}
+@media (max-width: 1100px) {
+  .containerType {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 300px 300px 300px 300px;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .containerType .arrive1 {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .containerType .arrive2 {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 600px) {
+  .containerType {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 150px 300px 300px 300px 300px;
+  }
+
+  .containerType .arrive3 {
+    grid-column: span 2;
+  }
+  .containerType .arrive4 {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 550px) {
+  .containerNewArrival {
+    margin: 0px 10px 50px;
+  }
+}

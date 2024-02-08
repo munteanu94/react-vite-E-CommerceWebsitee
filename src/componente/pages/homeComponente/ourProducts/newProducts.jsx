@@ -37,12 +37,18 @@ export default function NewProducts() {
                   </div>
                   <div className="inputRadio">
                     <input
+                      className="checked"
                       type="radio"
                       name="products"
                       id={user.input1}
                       checked
                     />
-                    <input type="radio" name="products" id={user.input2} />
+                    <input
+                      className="checked"
+                      type="radio"
+                      name="products"
+                      id={user.input2}
+                    />
                     <label htmlFor={user.input1} className="box num1">
                       <div className="circle" id={user.input1}>
                         <div className="circleSmoll"></div>
