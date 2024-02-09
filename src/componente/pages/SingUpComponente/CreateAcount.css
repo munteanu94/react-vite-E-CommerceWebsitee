@@ -1,0 +1,88 @@
+.ContainerAcount {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 50px 80px 80px 0px;
+  column-gap: 130px;
+}
+.boxImg {
+  grid-column: span 2;
+}
+.boxImg img {
+  width: 100%;
+  max-height: 800px;
+}
+.ContainerAcount .boxInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 50px;
+}
+
+.ContainerAcount .boxInput h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.ContainerAcount .boxInput input {
+  height: 35px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+.boxLogIn {
+  display: flex;
+  margin-left: 50px;
+  column-gap: 25px;
+  color: rgb(104, 102, 102);
+}
+.linkLogIn {
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid silver;
+  color: black;
+}
+.ContainerAcount .btn button {
+  width: 100%;
+  margin-top: 15px;
+}
+@media (max-width: 1170px) {
+  .ContainerAcount {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 100px;
+  }
+  .boxImg {
+    grid-column: span 3;
+  }
+  .ContainerAcount .boxInput {
+    grid-column: span 2;
+  }
+  .boxImg img {
+    height: 100%;
+  }
+  .boxLogIn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .ContainerAcount {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 10px;
+    margin: 50px 10px 80px 0px;
+  }
+}
+@media (max-width: 600px) {
+  .ContainerAcount {
+    display: flex;
+    flex-direction: column;
+    margin: 80px;
+    row-gap: 50px;
+  }
+}
+@media (max-width: 550px) {
+  .ContainerAcount {
+    margin: 50px 10px;
+  }
+}
