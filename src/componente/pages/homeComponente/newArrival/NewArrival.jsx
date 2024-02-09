@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./NewArrival.css";
+import "./newArrival.css";
 import type1 from "./image/type1.png";
 import type2 from "./image/type2.png";
 import type3 from "./image/type3.png";
