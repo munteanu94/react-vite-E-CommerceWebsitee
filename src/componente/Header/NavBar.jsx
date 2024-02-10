@@ -12,7 +12,7 @@ export default function NavBar() {
         <h2 className="logo">Exclusive</h2>
         <ul className="ulList">
           <li>
-            <NavLink className="link" to="/Home">
+            <NavLink className="link" to="/react-vite-E-CommerceWebsitee/">
               Home
             </NavLink>
           </li>
