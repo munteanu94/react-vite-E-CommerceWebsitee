@@ -18,7 +18,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/react-vite-E-CommerceWebsitee/" element={<Home />} />
-          <Route element={<About />} />
+          <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/SingUp" element={<SingUp />} />
         </Routes>

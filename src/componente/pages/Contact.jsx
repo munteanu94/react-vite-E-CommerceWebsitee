@@ -1,8 +1,25 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { SlEnvolope } from "react-icons/sl";
+import { useState } from "react";
+import Validation from "./SingUpComponente/Validation.jsx";
 
 import "./ContactComponente/Contact.css";
 export default function Contact() {
+  const [value, setValue] = useState({
+    name: "",
+    email: "",
+    number: "",
+  });
+  const [errors, setErrors] = useState({});
+  function handleInput(event) {
+    const newObj = { ...value, [event.target.name]: event.target.value };
+    setValue(newObj);
+  }
+  function handleValidation(event) {
+    event.preventDefault();
+    setErrors(Validation(value));
+  }
+
   return (
     <>
       <div className="containerContact">
@@ -37,11 +54,28 @@ export default function Contact() {
             </div>
           </div>
           <div className="containerForm">
-            <form>
+            <form onSubmit={handleValidation}>
               <div className="inputFirst">
-                <input type="text" placeholder="Your Name *" />
-                <input type="email" placeholder="Your Email *" />
-                <input type="number" placeholder="Your Phone *" />
+                <input
+                  type="text"
+                  placeholder="Your Name *"
+                  onChange={handleInput}
+                />
+                {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+                <input
+                  type="email"
+                  placeholder="Your Email *"
+                  onChange={handleInput}
+                />
+                {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+                <input
+                  type="number"
+                  placeholder="Your Phone *"
+                  onChange={handleInput}
+                />
+                {errors.number && (
+                  <p style={{ color: "red" }}>{errors.number}</p>
+                )}
               </div>
               <textarea placeholder="Your Massage"></textarea>
               <div className="btnSendMessage">

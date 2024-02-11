@@ -90,6 +90,7 @@
   background-color: red;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
 }
 @media (max-width: 1250px) {
   .boxContact .containerForm .inputFirst input {
