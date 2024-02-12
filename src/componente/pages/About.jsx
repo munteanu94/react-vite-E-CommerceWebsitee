@@ -1,5 +1,7 @@
+import Number from "./AboutComponenet/Number.jsx";
 import OurStory from "./AboutComponenet/OurStory.jsx";
-
+import SliderStaff from "./AboutComponenet/SliderStaf.jsx";
+import Delivery from "./homeComponente/Delivery/Delivery.jsx";
 export default function About() {
   return (
     <>
@@ -20,6 +22,9 @@ export default function About() {
           / About
         </p>
         <OurStory />
+        <Number />
+        <SliderStaff />
+        <Delivery />
       </div>
     </>
   );

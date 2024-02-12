@@ -1,0 +1,27 @@
+.ContainerSlideStaff {
+  margin: 0px 80px 80px 80px;
+  position: relative;
+}
+.ContainerSlideStaff .swiper-button-prev,
+.ContainerSlideStaff .swiper-button-next {
+  display: none;
+}
+.staffSwiper {
+  position: relative;
+  padding-bottom: 50px;
+}
+.ContainerSlideStaff .boxImgSlider img {
+  width: 100%;
+}
+.ContainerSlideStaff h2,
+.ContainerSlideStaff p,
+.ContainerSlideStaff .staffMedia {
+  margin-top: 10px;
+}
+.ContainerSlideStaff h2 {
+  font-size: 30px;
+}
+.ContainerSlideStaff .staffMedia {
+  display: flex;
+  column-gap: 10px;
+}
