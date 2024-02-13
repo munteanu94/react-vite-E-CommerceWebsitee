@@ -2,10 +2,15 @@ import { NavLink } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { BiCartAlt } from "react-icons/bi";
-
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ShopContext } from "../pages/homeComponente/sectionSecond/subComponete/Context.jsx";
+import { carts } from "../pages/homeComponente/sectionSecond/subComponete/ListCart.js";
 import "./NavBar.css";
 
-export default function NavBar() {
+export default function NavBar(props) {
+  const { setCartItems, cartItems } = useContext(ShopContext);
+
   return (
     <nav className="containerNav">
       <div className="containerWrapper">
@@ -41,7 +46,12 @@ export default function NavBar() {
             <IoIosHeartEmpty />
           </li>
           <li>
-            <BiCartAlt />
+            <Link to="/Carts">
+              <BiCartAlt />
+              {carts.map(
+                (user) => cartItems[user.id] > 0 && <>({cartItems[user.id]})</>
+              )}
+            </Link>
           </li>
         </ul>
       </div>

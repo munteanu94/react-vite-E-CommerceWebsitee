@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import "./btnSlide.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
@@ -12,7 +12,12 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import Star from "./StarsFeedback.jsx";
 import "./Swiper.css";
-export default function SliderSales() {
+
+import { ShopContext } from "./Context.jsx";
+
+export default function SliderSales(props) {
+  const { addToCart, cartItems } = useContext(ShopContext);
+
   return (
     <div className="block">
       <div className="containerSlider2">
@@ -55,7 +60,13 @@ export default function SliderSales() {
                       <IoEyeOutline />
                     </div>
                     <div className="ContainerAdd">
-                      <button className="btnAdd">Add To Cart</button>
+                      <button
+                        className="btnAdd"
+                        onClick={() => addToCart(user.id)}
+                      >
+                        Add To Cart
+                        {cartItems[user.id] > 0 && <>({cartItems[user.id]})</>}
+                      </button>
                     </div>
                   </div>
                   <div>
