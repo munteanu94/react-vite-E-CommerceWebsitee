@@ -54,6 +54,26 @@
   align-items: center;
   font-size: 20px;
 }
+
+.boxAmountCarts {
+  position: relative;
+}
+.boxAmountCarts .numberCarts {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  font-size: 15px;
+  color: white;
+  padding: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 950px) {
   .containerWrapper {
     display: grid;

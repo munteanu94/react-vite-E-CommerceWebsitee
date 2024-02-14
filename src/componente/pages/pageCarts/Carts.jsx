@@ -3,9 +3,14 @@ import { ShopContext } from "../homeComponente/sectionSecond/subComponete/Contex
 import { carts } from "../homeComponente/sectionSecond/subComponete/ListCart.js";
 import CartItem from "./cart-add.jsx";
 import "./Carts.css";
-import { FaPenClip } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+
 export default function Carts() {
-  const { addToCart, cartItems } = useContext(ShopContext);
+  const { removeFomCart, cartItems, getTotalCartAmount, getTotalCart } =
+    useContext(ShopContext);
+  const totalAmount = getTotalCartAmount();
+  const total = getTotalCart();
+  const navigate = useNavigate();
   return (
     <div className="containerCarts">
       <p>
@@ -21,9 +26,37 @@ export default function Carts() {
         <div className="CartItems">
           {carts.map((product) => {
             if (cartItems[product.id] !== 0) {
-              return <CartItem data={product} />;
+              return <CartItem data={product} myFunction={total} />;
             }
           })}
+        </div>
+        <div className="btnControl">
+          <button onClick={() => navigate("/react-vite-E-CommerceWebsitee/")}>
+            Return To Shop
+          </button>
+          <button onClick={() => removeFomCart()}>Update Cart</button>
+        </div>
+        <div className="containerBottomCart">
+          <div className="boxApply">
+            <input type="text" placeholder="Coupon Code" />
+            <button>Apply Coupon</button>
+          </div>
+          <div className="boxCartTotal">
+            <h4>Cart Total</h4>
+            <div>
+              <p>Subtotal:</p>
+              <p>${totalAmount}</p>
+            </div>
+            <div>
+              <p>Shopping:</p>
+              <p>Free</p>
+            </div>
+            <div>
+              <p>Total:</p>
+              <p>${totalAmount}</p>
+            </div>
+            <button>Procees to checkout</button>
+          </div>
         </div>
       </div>
     </div>

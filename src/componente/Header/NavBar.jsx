@@ -9,7 +9,8 @@ import { carts } from "../pages/homeComponente/sectionSecond/subComponete/ListCa
 import "./NavBar.css";
 
 export default function NavBar(props) {
-  const { setCartItems, cartItems } = useContext(ShopContext);
+  const { getTotalCartNumber } = useContext(ShopContext);
+  let amountProduct = getTotalCartNumber();
 
   return (
     <nav className="containerNav">
@@ -45,13 +46,11 @@ export default function NavBar(props) {
           <li>
             <IoIosHeartEmpty />
           </li>
-          <li>
+          <li className="boxAmountCarts">
             <Link to="/Carts">
               <BiCartAlt />
-              {carts.map(
-                (user) => cartItems[user.id] > 0 && <>({cartItems[user.id]})</>
-              )}
             </Link>
+            <p className="numberCarts">{amountProduct}</p>
           </li>
         </ul>
       </div>

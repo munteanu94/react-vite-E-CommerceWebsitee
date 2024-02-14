@@ -1,14 +1,21 @@
-import React from "react";
-import { FaRegHeart } from "react-icons/fa";
-import { IoEyeOutline } from "react-icons/io5";
-import Star from "../homeComponente/sectionSecond/subComponete/StarsFeedback";
+import React, { useContext, useEffect } from "react";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
-
+import { ShopContext } from "../homeComponente/sectionSecond/subComponete/Context.jsx";
+import { carts } from "../homeComponente/sectionSecond/subComponete/ListCart.js";
 import "./cart-add.css";
-export default function CartItem(props) {
-  const { id, image, sale, name, price, prastprice, stars, reviews } =
-    props.data;
+export default function CartItem({ data, myFunction }) {
+  const {
+    addToCart,
+    cartItems,
+    removeFomCart,
+    updateCartItemCount,
+    getTotalCart,
+    getTotalCartAmount,
+  } = useContext(ShopContext);
+  const totalPrice = getTotalCart();
+  const { id, image, name, price, totalP } = data;
+
   return (
     <div className="containerCartAdd">
       <div key={id}>
@@ -21,16 +28,23 @@ export default function CartItem(props) {
             <p className="gridCenter">${price}</p>
             <div className="gridCenter">
               <div className="inputChange ">
-                <input className="inputAddCart" type="number"></input>
-                <button>
+                <input
+                  className="inputAddCart"
+                  type="number"
+                  value={cartItems[id]}
+                  onChange={(e) =>
+                    updateCartItemCount(Number(e.target.value), id)
+                  }
+                ></input>
+                <button onClick={() => addToCart(id)}>
                   <MdKeyboardArrowUp />
                 </button>
-                <button>
+                <button onClick={() => removeFomCart(id)}>
                   <MdKeyboardArrowDown />
                 </button>
               </div>
             </div>
-            <p className="lastP">Totatl</p>
+            <p className="lastP">{myFunction}</p>
           </div>
         </div>
       </div>
