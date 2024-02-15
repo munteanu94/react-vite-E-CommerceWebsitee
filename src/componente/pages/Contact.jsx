@@ -56,26 +56,37 @@ export default function Contact() {
           <div className="containerForm">
             <form onSubmit={handleValidation}>
               <div className="inputFirst">
-                <input
-                  type="text"
-                  placeholder="Your Name *"
-                  onChange={handleInput}
-                />
-                {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
-                <input
-                  type="email"
-                  placeholder="Your Email *"
-                  onChange={handleInput}
-                />
-                {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
-                <input
-                  type="number"
-                  placeholder="Your Phone *"
-                  onChange={handleInput}
-                />
-                {errors.number && (
-                  <p style={{ color: "red" }}>{errors.number}</p>
-                )}
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Name *"
+                    onChange={handleInput}
+                  />
+
+                  {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your Email *"
+                    onChange={handleInput}
+                  />
+
+                  {errors.email && (
+                    <p style={{ color: "red" }}>{errors.email}</p>
+                  )}
+                </div>
+                <div>
+                  <input
+                    type="number"
+                    placeholder="Your Phone *"
+                    onChange={handleInput}
+                  />
+
+                  {errors.number && (
+                    <p style={{ color: "red" }}>{errors.number}</p>
+                  )}
+                </div>
               </div>
               <textarea placeholder="Your Massage"></textarea>
               <div className="btnSendMessage">

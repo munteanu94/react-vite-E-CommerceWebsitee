@@ -26,7 +26,9 @@ export default function Carts() {
         <div className="CartItems">
           {carts.map((product) => {
             if (cartItems[product.id] !== 0) {
-              return <CartItem data={product} myFunction={total} />;
+              return (
+                <CartItem data={product} myFunction={total} key={product.id} />
+              );
             }
           })}
         </div>
@@ -55,7 +57,9 @@ export default function Carts() {
               <p>Total:</p>
               <p>${totalAmount}</p>
             </div>
-            <button>Procees to checkout</button>
+            <button onClick={() => navigate("/ProceesCheckout")}>
+              Procees to checkout
+            </button>
           </div>
         </div>
       </div>

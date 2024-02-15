@@ -9,6 +9,12 @@ export default function Validation(value) {
   if (value.number === "") {
     errors.number = "Number is Required";
   }
+  if (value.address === "") {
+    errors.address = "Address is Required";
+  }
+  if (value.city === "") {
+    errors.city = "City is Required";
+  }
   if (value.email === "") {
     errors.email = "Email is Required";
   } else if (!email_pattern.test(value.email)) {

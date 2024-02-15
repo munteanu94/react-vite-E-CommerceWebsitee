@@ -11,6 +11,7 @@ import SingUp from "./componente/pages/SingUp.jsx";
 import HeaderTop from "./componente/Header/HeaderTop.jsx";
 import NavBar from "./componente/Header/NavBar.jsx";
 import Carts from "./componente/pages/pageCarts/Carts.jsx";
+import ProceesCheckout from "./componente/pages/pageCheckout/checkout.jsx";
 import "./App.css";
 import ShopContextProvider from "./componente/pages/homeComponente/sectionSecond/subComponete/Context.jsx";
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/SingUp" element={<SingUp />} />
             <Route path="/Carts" element={<Carts />} />
+            <Route path="/ProceesCheckout" element={<ProceesCheckout />} />
           </Routes>
           <Footer />
         </ShopContextProvider>

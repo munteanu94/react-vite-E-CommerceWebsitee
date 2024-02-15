@@ -1,0 +1,204 @@
+.containerCheckout {
+  margin: 50px 80px;
+}
+
+.containerCheckout p span {
+  color: silver;
+}
+.containerWrapperCheck {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 100px;
+}
+.containerWrapperCheck .containerbilling form ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.containerWrapperCheck .containerbilling h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.containerWrapperCheck .containerbilling form ul li {
+  display: flex;
+  flex-direction: column;
+}
+.containerWrapperCheck .containerbilling form ul li label {
+  color: rgb(112, 109, 109);
+  margin-bottom: 10px;
+}
+.containerWrapperCheck .containerbilling form ul li input[type="text"] {
+  border: none;
+  background-color: rgb(206, 252, 252);
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  text-indent: 15px;
+}
+.containerWrapperCheck .containerbilling form ul .checkboxInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 35px;
+  column-gap: 30px;
+}
+.containerWrapperCheck .containerbilling form ul .checkboxInput label {
+  margin-bottom: 0;
+  color: black;
+  cursor: pointer;
+}
+.containerWrapperCheck
+  .containerbilling
+  form
+  ul
+  .checkboxInput
+  input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  outline: none;
+  background-color: silver;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerWrapperCheck
+  .containerbilling
+  form
+  ul
+  .checkboxInput
+  input[type="checkbox"]:after {
+  content: "✔";
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+.containerWrapperCheck
+  .containerbilling
+  form
+  ul
+  .checkboxInput
+  input[type="checkbox"]:hover {
+  background-color: rgb(133, 131, 131);
+}
+.containerWrapperCheck
+  .containerbilling
+  form
+  ul
+  .checkboxInput
+  input[type="checkbox"]:checked {
+  background-color: red;
+}
+.containerWrapperCheck
+  .containerbilling
+  form
+  ul
+  .checkboxInput
+  input[type="checkbox"]:checked:after {
+  display: block;
+}
+
+/* style cart item */
+.containerWrapperCheck .CartsCheckout {
+  padding-top: 76px;
+}
+
+.containerWrapperCheck .containerCartAdd .CartAdd .containerCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 30px;
+  margin-right: 60px;
+}
+
+.containerWrapperCheck .CartAdd .containerCart .inputChange {
+  display: none;
+}
+.containerWrapperCheck .CartAdd .containerCart .gridCenter {
+  display: none;
+}
+.costTotal .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.costTotal .row:nth-child(2),
+.costTotal .row:nth-child(1) {
+  border-bottom: 1px solid silver;
+}
+.costTotal .row:nth-child(2),
+.costTotal .row:nth-child(1),
+.costTotal .row:nth-child(3),
+.costTotal .row:nth-child(4) {
+  margin-right: 50px;
+}
+.costTotal .row ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.costTotal .row ul li {
+  display: flex;
+  column-gap: 20px;
+}
+.costTotal .row ul li input[type="radio"] {
+  width: 20px;
+}
+.costTotal .row .typeOffCreditCarts {
+  display: flex;
+  column-gap: 5px;
+}
+.costTotal .row .typeOffCreditCarts img {
+  width: 42px;
+  height: 28px;
+}
+.costTotal .row input[type="text"] {
+  width: 60%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+.costTotal .row .btnCouponCheck {
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+}
+.costTotal .row .btnOrderCheck {
+  height: 40px;
+  width: 35%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: red;
+}
+@media (max-width: 1000px) {
+  .containerWrapperCheck {
+    column-gap: 50px;
+  }
+  .containerCheckout {
+    margin: 50px 10px;
+  }
+}
+@media (max-width: 650px) {
+  .containerWrapperCheck {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .costTotal .row:nth-child(4) {
+    margin-right: 0;
+  }
+}
