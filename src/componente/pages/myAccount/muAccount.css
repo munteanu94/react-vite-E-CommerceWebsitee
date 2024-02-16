@@ -1,0 +1,124 @@
+.containerMyAccount {
+  margin: 50px 80px;
+}
+.containerMyAccount .topTitleAccount {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.containerMyAccount .topTitleAccount span {
+  color: silver;
+}
+.containerMyAccount .myAccountBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.containerMyAccount .columnAccountEdit {
+  grid-column: span 3;
+  padding: 40px 80px;
+  box-shadow: 0px 0px 5px 2px rgb(221, 220, 220);
+  border-radius: 10px;
+}
+.containerMyAccount .firstInputAccount {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+}
+.containerMyAccount .firstInputAccount .first {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.containerMyAccount .firstInputAccount label {
+  margin-bottom: 10px;
+}
+.containerMyAccount .errorForm {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+/* style myAccountBox  */
+.containerMyAccount .columnAccount h4 {
+  margin-bottom: 15px;
+}
+.containerMyAccount .columnAccount ul {
+  margin-left: 25px;
+}
+.containerMyAccount .columnAccount ul li {
+  margin-bottom: 10px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.containerMyAccount .columnAccountEdit h3 {
+  margin-bottom: 20px;
+}
+/* style input bottom password */
+.containerMyAccount .boxPasswordAccount {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.containerMyAccount input {
+  height: 40px;
+  background-color: rgb(188, 246, 246);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+.containerMyAccount .btnAccount {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  column-gap: 10px;
+}
+.containerMyAccount .btnAccountSave {
+  background-color: red;
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.containerMyAccount .btnAccountCancel {
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.containerMyAccount .btnAccountCancel:hover {
+  background-color: red;
+  color: white;
+}
+@media (max-width: 1000px) {
+  .containerMyAccount .columnAccountEdit {
+    padding: 40px 20px;
+  }
+  .containerMyAccount .myAccountBox {
+    column-gap: 20px;
+    position: relative;
+  }
+}
+@media (max-width: 850px) {
+  .columnAccount {
+    position: absolute;
+    left: -300px;
+  }
+  .containerMyAccount .columnAccountEdit {
+    grid-column: span 4;
+  }
+}
+@media (max-width: 650px) {
+  .containerMyAccount .firstInputAccount {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  .containerMyAccount {
+    margin: 50px 20px;
+  }
+}

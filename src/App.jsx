@@ -12,6 +12,7 @@ import HeaderTop from "./componente/Header/HeaderTop.jsx";
 import NavBar from "./componente/Header/NavBar.jsx";
 import Carts from "./componente/pages/pageCarts/Carts.jsx";
 import ProceesCheckout from "./componente/pages/pageCheckout/checkout.jsx";
+import MyAccount from "./componente/pages/myAccount/myAccount.jsx";
 import "./App.css";
 import ShopContextProvider from "./componente/pages/homeComponente/sectionSecond/subComponete/Context.jsx";
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/SingUp" element={<SingUp />} />
             <Route path="/Carts" element={<Carts />} />
             <Route path="/ProceesCheckout" element={<ProceesCheckout />} />
+            <Route path="/MyAccount" element={<MyAccount />} />
           </Routes>
           <Footer />
         </ShopContextProvider>

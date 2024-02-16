@@ -4,11 +4,16 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { BiCartAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { RxPerson } from "react-icons/rx";
+import { useState } from "react";
+
 import { ShopContext } from "../pages/homeComponente/sectionSecond/subComponete/Context.jsx";
 import { carts } from "../pages/homeComponente/sectionSecond/subComponete/ListCart.js";
 import "./NavBar.css";
 
 export default function NavBar(props) {
+  const [active, setActive] = useState(false);
+
   const { getTotalCartNumber } = useContext(ShopContext);
   let amountProduct = getTotalCartNumber();
 
@@ -51,6 +56,15 @@ export default function NavBar(props) {
               <BiCartAlt />
             </Link>
             <p className="numberCarts">{amountProduct}</p>
+          </li>
+          <li className={active ? "myAccount active" : "myAccount"}>
+            <Link
+              to="/MyAccount"
+              onClick={() => setActive((prev) => !prev)}
+              onBlur={() => setActive(false)}
+            >
+              <RxPerson />
+            </Link>
           </li>
         </ul>
       </div>
