@@ -9,9 +9,29 @@
 .containerMyAccount .topTitleAccount span {
   color: silver;
 }
+.containerMyAccount .topTitleAccount p {
+  position: relative;
+}
+.containerMyAccount .topTitleAccount .iconMenuAccount {
+  font-size: 30px;
+  position: absolute;
+  bottom: -40px;
+  display: none;
+  cursor: pointer;
+}
+
 .containerMyAccount .myAccountBox {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+.containerMyAccount .inconCloseAccount {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
 }
 .containerMyAccount .columnAccountEdit {
   grid-column: span 3;
@@ -109,6 +129,21 @@
   }
   .containerMyAccount .columnAccountEdit {
     grid-column: span 4;
+  }
+  .containerMyAccount .topTitleAccount .iconMenuAccount {
+    display: block;
+  }
+  .rightActive.columnAccount {
+    left: 0px;
+    z-index: 100;
+    background-color: white;
+    width: 250px;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+  .containerMyAccount .inconCloseAccount {
+    display: block;
   }
 }
 @media (max-width: 650px) {

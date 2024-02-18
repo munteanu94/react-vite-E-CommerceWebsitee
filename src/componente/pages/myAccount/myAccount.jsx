@@ -1,12 +1,17 @@
 import React from "react";
 import "./muAccount.css";
 import * as yup from "yup";
+import { TiThMenu } from "react-icons/ti";
+import { IoCloseCircle } from "react-icons/io5";
+import { useState } from "react";
 
 import { userAccount } from "./validationAccount";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 export default function MyAccount() {
+  const [openSide, setOpenSide] = useState(false);
+  const [closeSide, setCloseSide] = useState(false);
   const {
     register,
     handleSubmit,
@@ -22,15 +27,32 @@ export default function MyAccount() {
     <div className="containerMyAccount">
       <div className="topTitleAccount">
         <p>
-          <span>Home</span> / My Account
+          <TiThMenu
+            className="iconMenuAccount"
+            onClick={() => {
+              setOpenSide(!openSide);
+              setCloseSide(!closeSide);
+            }}
+          />
+          <span>Home</span>/ My Account
         </p>
         <p>
           Welcome! <span>MD Rime !</span>
         </p>
       </div>
       <div className="myAccountBox">
-        <div className="columnAccount">
+        <div
+          className={openSide ? "columnAccount rightActive" : "columnAccount"}
+        >
           <div>
+            <IoCloseCircle
+              className="inconCloseAccount"
+              onClick={() => {
+                setOpenSide(!openSide);
+                setCloseSide(!closeSide);
+              }}
+            />
+
             <h4>Manage My Account</h4>
             <ul>
               <li>My Profile</li>
