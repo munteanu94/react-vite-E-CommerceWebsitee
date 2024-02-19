@@ -1,0 +1,198 @@
+.productDitailAc {
+  margin: 50px 80px;
+}
+.productDitailAc .swiper-button-prev::after,
+.productDitailAc .swiper-button-next::after {
+  display: none;
+}
+.productDitailAc .swiper-button-prev,
+.productDitailAc .swiper-button-next {
+  display: none;
+}
+.productDitailAc .namePage {
+  margin-bottom: 50px;
+}
+.boxDetailAc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+}
+.boxDetailAc .boxImages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 125px);
+  gap: 20px;
+  grid-column: span 2;
+}
+.boxDetailAc .boxImages .boxLarge {
+  grid-column: span 3;
+  grid-row: span 4;
+}
+.boxDetailAc .boxImages img {
+  width: 100%;
+  height: 100%;
+}
+/* style product detail */
+.boxDitailProdus {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.boxDitailProdus h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.boxDitailProdus .priceDetail {
+  font-size: 25px;
+}
+.boxDitailProdus .discribe {
+  border-bottom: 1px solid silver;
+  padding-bottom: 15px;
+}
+.boxRadio {
+  display: flex;
+  column-gap: 5px;
+}
+
+.spanCircle1,
+.spanCircle2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.spanCircle1 .spanSmoll,
+.spanCircle2 .spanSmoll {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 100%;
+}
+.spanCircle1 .spanSmoll {
+  background-color: rgb(176, 176, 245);
+}
+.spanCircle2 .spanSmoll {
+  background-color: red;
+}
+.spanCircle1 {
+  background-color: rgb(176, 176, 245);
+}
+.spanCircle2 {
+  background-color: red;
+}
+#color1:checked ~ label.num1 .spanCircle1,
+#color2:checked ~ label.num2 .spanCircle2 {
+  border: 2px solid black;
+}
+#color1:checked ~ label.num1 .spanCircle1 .spanSmoll {
+  background-color: rgb(176, 176, 245);
+  border: 2px solid white;
+}
+#color2:checked ~ label.num2 .spanCircle2 .spanSmoll {
+  background-color: red;
+  border: 2px solid white;
+}
+.boxRadio input[type="radio"] {
+  display: none;
+}
+.boxSize {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+.boxSize .boxbtnSize {
+  display: flex;
+  column-gap: 10px;
+}
+.boxSize .boxbtnSize button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.boxSize .boxbtnSize button:hover {
+  background-color: red;
+  color: white;
+}
+.boxDitailProdus .boxAmount {
+  display: flex;
+  justify-content: space-between;
+}
+.boxDitailProdus .boxAmount .boxInputChange {
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+.boxDitailProdus .boxAmount .boxInputChange .btnDecrease,
+.boxDitailProdus .boxAmount .boxInputChange .btnIncrease {
+  width: 35px;
+  height: 100%;
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.boxDitailProdus .boxAmount .boxInputChange input {
+  width: 70px;
+  height: 100%;
+  text-indent: 30px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+}
+.boxDitailProdus .boxAmount .btnBuyProducsAc {
+  padding: 8px 25px;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid silver;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
+.boxDitailProdus .boxAmount .btnHeartAc {
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid silver;
+  cursor: pointer;
+}
+.boxDitailProdus .boxDelivery {
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.boxDitailProdus .boxDelivery .delivery {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding: 20px 10px;
+  border-bottom: 1px solid silver;
+}
+.boxDitailProdus .boxDelivery p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.boxDitailProdus .boxDelivery .iconCarDelivery {
+  font-size: 40px;
+}
+.boxDitailProdus .boxDelivery .returnDelivery {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding: 20px 10px;
+}

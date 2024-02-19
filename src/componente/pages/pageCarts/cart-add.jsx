@@ -12,8 +12,10 @@ export default function CartItem({ data, myFunction }) {
     updateCartItemCount,
     getTotalCart,
     getTotalCartAmount,
+    changeAmount,
   } = useContext(ShopContext);
   const totalPrice = getTotalCart();
+
   const { id, image, name, price, totalP } = data;
 
   return (

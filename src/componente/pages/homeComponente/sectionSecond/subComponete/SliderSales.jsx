@@ -2,7 +2,7 @@ import React, { useRef, useState, useContext } from "react";
 import "./btnSlide.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
-
+import { Link } from "react-router-dom";
 import { Navigation } from "swiper/modules";
 import "../SectionSecond.css";
 import "swiper/css";
@@ -51,14 +51,19 @@ export default function SliderSales(props) {
               <div className="sliderCart">
                 <div className="containerCart">
                   <div className="containerImg">
-                    <img src={user.image} alt="cart" />
-                    <div className="sales">-{user.sale}%</div>
-                    <div className="icon heart">
-                      <FaRegHeart />
-                    </div>
-                    <div className="icon eyes">
-                      <IoEyeOutline />
-                    </div>
+                    <Link to="/productDetails">
+                      <img
+                        src={import.meta.env.VITE_PUBLIC_URL + user.image}
+                        alt="cart"
+                      />
+                      <div className="sales">-{user.sale}%</div>
+                      <div className="icon heart">
+                        <FaRegHeart />
+                      </div>
+                      <div className="icon eyes">
+                        <IoEyeOutline />
+                      </div>
+                    </Link>
                     <div className="ContainerAdd">
                       <button
                         className="btnAdd"
@@ -69,6 +74,7 @@ export default function SliderSales(props) {
                       </button>
                     </div>
                   </div>
+
                   <div>
                     <div className="textCart">
                       <h5>{user.name}</h5>

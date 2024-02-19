@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ShopContext } from "../homeComponente/sectionSecond/subComponete/Context.jsx";
 import { carts } from "../homeComponente/sectionSecond/subComponete/ListCart.js";
 import CartItem from "./cart-add.jsx";
@@ -6,6 +6,11 @@ import "./Carts.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Carts() {
+  const [quantity, setQuantity] = useState("");
+  const [editQuantity, setEditQuantity] = useState({
+    id: "",
+    status: false,
+  });
   const { removeFomCart, cartItems, getTotalCartAmount, getTotalCart } =
     useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
