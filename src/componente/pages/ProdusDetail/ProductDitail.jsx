@@ -1,4 +1,4 @@
-import "./productDitail.css";
+import "./ProductDitail.css";
 import produs1 from "./produs1.png";
 import produs2 from "./produs2.png";
 import produs3 from "./produs3.png";
