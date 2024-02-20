@@ -4,7 +4,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { ShopContext } from "../homeComponente/sectionSecond/subComponete/Context.jsx";
 import { carts } from "../homeComponente/sectionSecond/subComponete/ListCart.js";
 import "./cart-add.css";
-export default function CartItem({ data, myFunction }) {
+export default function CartItem({ data, totalChanse }) {
   const {
     addToCart,
     cartItems,
@@ -14,10 +14,12 @@ export default function CartItem({ data, myFunction }) {
     getTotalCartAmount,
     changeAmount,
   } = useContext(ShopContext);
-  const totalPrice = getTotalCart();
 
   const { id, image, name, price, totalP } = data;
-
+  const totalPrice = getTotalCart();
+  const tatalPriceString = Object.entries(totalPrice).map(
+    ([producId, total]) => <div key={producId}> $ {total}</div>
+  );
   return (
     <div className="containerCartAdd">
       <div key={id}>
@@ -46,7 +48,7 @@ export default function CartItem({ data, myFunction }) {
                 </button>
               </div>
             </div>
-            <p className="lastP">{myFunction}</p>
+            <p className="lastP">{tatalPriceString[id - 1]}</p>
           </div>
         </div>
       </div>

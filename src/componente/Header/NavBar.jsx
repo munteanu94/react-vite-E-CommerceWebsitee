@@ -8,7 +8,6 @@ import { RxPerson } from "react-icons/rx";
 import { useState } from "react";
 
 import { ShopContext } from "../pages/homeComponente/sectionSecond/subComponete/Context.jsx";
-import { carts } from "../pages/homeComponente/sectionSecond/subComponete/ListCart.js";
 import "./NavBar.css";
 
 export default function NavBar(props) {
@@ -57,11 +56,11 @@ export default function NavBar(props) {
             </Link>
             <p className="numberCarts">{amountProduct}</p>
           </li>
-          <li className={active ? "myAccount active" : "myAccount"}>
+          <li>
             <Link
+              className={active ? "myAccount active" : "myAccount"}
               to="/MyAccount"
               onClick={() => setActive((prev) => !prev)}
-              onBlur={() => setActive(false)}
             >
               <RxPerson />
             </Link>

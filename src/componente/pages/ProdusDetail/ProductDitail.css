@@ -31,6 +31,7 @@
 .boxDetailAc .boxImages img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 /* style product detail */
 .boxDitailProdus {
@@ -108,7 +109,7 @@
   display: flex;
   column-gap: 10px;
 }
-.boxSize .boxbtnSize button {
+.boxSize .boxbtnSize .buttonSize {
   width: 25px;
   height: 25px;
   border: none;
@@ -117,6 +118,10 @@
   border-radius: 5px;
   font-size: 10px;
   cursor: pointer;
+}
+.boxSize .boxbtnSize .buttonSize.activeBtn {
+  background-color: red;
+  color: white;
 }
 .boxSize .boxbtnSize button:hover {
   background-color: red;
@@ -148,6 +153,10 @@
   outline: none;
   border-left: 1px solid silver;
   border-right: 1px solid silver;
+}
+.boxDitailProdus .boxbtnBuyNow {
+  display: flex;
+  column-gap: 20px;
 }
 .boxDitailProdus .boxAmount .btnBuyProducsAc {
   padding: 8px 25px;
@@ -195,4 +204,46 @@
   align-items: center;
   column-gap: 20px;
   padding: 20px 10px;
+}
+.productDitailAc .icon {
+  color: orange;
+}
+.productDitailAc .feedbackDetail {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .boxDetailAc {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .boxDetailAc .boxImages {
+    grid-column: span 3;
+  }
+  .boxDitailProdus {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 1200px) {
+  .productDitailAc .boxDitailProdus .boxAmount {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .productDitailAc .boxInputChange {
+    width: 142px;
+    height: 35px;
+  }
+}
+@media (max-width: 900px) {
+  .productDitailAc {
+    margin: 50px 20px;
+  }
+}
+@media (max-width: 675px) {
+  .boxDetailAc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }

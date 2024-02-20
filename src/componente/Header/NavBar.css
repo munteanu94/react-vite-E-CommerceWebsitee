@@ -101,16 +101,6 @@
   align-items: center;
   color: white;
 }
- {
-  background-color: red;
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
 
 @media (max-width: 950px) {
   .containerWrapper {
@@ -140,13 +130,16 @@
   .containerWrapper {
     margin: 20px;
   }
+  .containerWrapper .ulList2 {
+    column-gap: 5px;
+  }
 }
 @media (max-width: 430px) {
   .containerWrapper {
     margin: 20px 0px;
   }
   .containerInput {
-    width: 190px;
+    width: 170px;
   }
   .containerInput input {
     text-indent: 5px;

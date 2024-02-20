@@ -5,7 +5,7 @@ import CartItem from "./cart-add.jsx";
 import "./Carts.css";
 import { useNavigate } from "react-router-dom";
 
-export default function Carts() {
+export default function Carts(props) {
   const [quantity, setQuantity] = useState("");
   const [editQuantity, setEditQuantity] = useState({
     id: "",
@@ -16,6 +16,9 @@ export default function Carts() {
   const totalAmount = getTotalCartAmount();
   const total = getTotalCart();
   const navigate = useNavigate();
+
+  const totalChanse = Object.entries(total);
+
   return (
     <div className="containerCarts">
       <p>
@@ -32,7 +35,11 @@ export default function Carts() {
           {carts.map((product) => {
             if (cartItems[product.id] !== 0) {
               return (
-                <CartItem data={product} myFunction={total} key={product.id} />
+                <CartItem
+                  data={product}
+                  myFunction={totalChanse}
+                  key={product.id}
+                />
               );
             }
           })}

@@ -14,14 +14,21 @@ export default function ShopContextProvider(props) {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
   const getTotalCart = () => {
-    let total = 0;
+    let produtsTotal = {};
+
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
         let itemInfo = carts.find((product) => product.id === Number(item));
-        total = cartItems[item] * itemInfo.price;
+        const itemTotal = cartItems[item] * itemInfo.price;
+
+        if (produtsTotal[itemInfo.id]) {
+          produtsTotal[itemInfo.id] += itemTotal;
+        } else {
+          produtsTotal[itemInfo.id] = itemTotal;
+        }
       }
     }
-    return total;
+    return produtsTotal;
   };
   const getTotalCartNumber = () => {
     let totalAmount = 0;
