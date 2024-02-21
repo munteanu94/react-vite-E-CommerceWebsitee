@@ -9,7 +9,7 @@ export default function HeaderTop() {
   return (
     <nav className="headerTop">
       <p>
-        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
+        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
         <Link className="ShowNow" to="/ShowNow">
           ShowNow
         </Link>
