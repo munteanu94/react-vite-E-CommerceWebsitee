@@ -15,6 +15,7 @@ import ProceesCheckout from "./componente/pages/pageCheckout/checkout.jsx";
 import MyAccount from "./componente/pages/myAccount/myAccount.jsx";
 import ProductDetail from "./componente/pages/ProdusDetail/ProductDitail.jsx";
 import AllProducts from "./componente/pages/AllProducts/AllProduscts.jsx";
+import ViewAllProducts from "./componente/pages/ViewAllProducts/ViewAllProducts.jsx";
 import "./App.css";
 import ShopContextProvider from "./componente/pages/homeComponente/sectionSecond/subComponete/Context.jsx";
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/MyAccount" element={<MyAccount />} />
             <Route path="/productDetails" element={<ProductDetail />} />
             <Route path="/ShowNow" element={<AllProducts />} />
+            <Route path="/ViewAllProducts" element={<ViewAllProducts />} />
           </Routes>
           <Footer />
         </ShopContextProvider>
