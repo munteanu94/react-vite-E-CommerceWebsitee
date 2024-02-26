@@ -40,16 +40,16 @@ export default function BoxJbl() {
     };
   }, [timerDays, timerHours, timerMinutes, timerSeconds]);
 
-  useEffect(() => {
-    const resetTimer = () => {
-      setTimerDays(5);
-      setTimerHours(23);
-      setTimerMinutes(59);
-      setTimerSeconds(59);
-    };
-    window.addEventListener("focus", resetTimer);
-    return () => window.removeEventListener("focus", resetTimer);
-  }, []);
+  // useEffect(() => {
+  //   const resetTimer = () => {
+  //     setTimerDays(5);
+  //     setTimerHours(23);
+  //     setTimerMinutes(59);
+  //     setTimerSeconds(59);
+  //   };
+  //   window.addEventListener("focus", resetTimer);
+  //   return () => window.removeEventListener("focus", resetTimer);
+  // }, []);
 
   return (
     <div className="containerJbl">

@@ -1,44 +1,53 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 export default function DeadLine() {
-  const [timerDays, setTimerDays] = useState("00");
-  const [timerHours, setTimerHours] = useState("00");
-  const [timerMinutes, setTimerMinutes] = useState("00");
-  const [timerSeconds, setTimerSeconds] = useState("00");
-
-  let interval = useRef();
-
-  function startTimer() {
-    const countdownDate = new Date("May 30, 2024 00:00:00").getTime();
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval.current);
-      } else {
-        setTimerDays(days);
-        setTimerHours(hours);
-        setTimerMinutes(minutes);
-        setTimerSeconds(seconds);
-      }
-    }, 1000);
-  }
+  const [timerDays, setTimerDays] = useState(3);
+  const [timerHours, setTimerHours] = useState(23);
+  const [timerMinutes, setTimerMinutes] = useState(59);
+  const [timerSeconds, setTimerSeconds] = useState(59);
 
   useEffect(() => {
-    startTimer();
+    const interval = setInterval(() => {
+      if (timerSeconds > 0) {
+        setTimerSeconds(timerSeconds - 1);
+      } else {
+        if (timerMinutes > 0) {
+          setTimerMinutes(timerMinutes - 1);
+          setTimerSeconds(59);
+        } else {
+          if (timerHours > 0) {
+            setTimerHours(timerHours - 1);
+            setTimerMinutes(59);
+            setTimerSeconds(59);
+          } else {
+            if (timerDays > 0) {
+              setTimerDays(timerDays - 1);
+              setTimerHours(23);
+              setTimerMinutes(59);
+              setTimerSeconds(59);
+            } else {
+              clearInterval(interval);
+            }
+          }
+        }
+      }
+    }, 1000);
     return () => {
-      clearInterval(interval.current);
+      clearInterval(interval);
     };
-  });
+  }, [timerDays, timerHours, timerMinutes, timerSeconds]);
+
+  useEffect(() => {
+    const resetTimer = () => {
+      setTimerDays(3);
+      setTimerHours(23);
+      setTimerMinutes(59);
+      setTimerSeconds(59);
+    };
+    window.addEventListener("reset", resetTimer);
+    return () => window.removeEventListener("focus", resetTimer);
+  }, []);
+
   return (
     <div className="containerTimeline">
       <div className="today">
