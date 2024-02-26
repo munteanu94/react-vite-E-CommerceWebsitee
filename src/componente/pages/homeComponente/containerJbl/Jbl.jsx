@@ -3,35 +3,55 @@ import imageJbl from "../containerJbl/jbl.png";
 import React, { useState, useEffect } from "react";
 import "./Jbl.css";
 export default function BoxJbl() {
-  const [timeLeft5d, setTimeLeft5d] = useState(5 * 24 * 60 * 60);
-  const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (timeLeft5d > 0) {
-        setTimeLeft5d((prevTime) => prevTime - 1);
-      } else if (timeLeft > 0) {
-        setTimeLeft((prevTime) => prevTime - 1);
-      }
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-  useEffect(() => {
-    const resetTime = () => {
-      setTimeLeft(24 * 60 * 60);
-    };
-    window.addEventListener("focus", resetTime);
-    return () => window.removeEventListener("focus", resetTime);
-  }, []);
+  const [timerDays, setTimerDays] = useState(5);
+  const [timerHours, setTimerHours] = useState(23);
+  const [timerMinutes, setTimerMinutes] = useState(59);
+  const [timerSeconds, setTimerSeconds] = useState(59);
 
-  const formatTime = (time) => {
-    const days = Math.floor(time / 24);
-    const hours = Math.floor(time / 3600);
-    const minutes = Math.floor((time % 3600) / 60);
-    const seconds = time % 60;
-    return `${hours.toString().padStart(2, "0")} : ${minutes
-      .toString()
-      .padStart(2, "0")} : ${seconds.toString().padStart(2, "0")}`;
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimerSeconds((prevSeconds) => {
+        if (prevSeconds > 0) {
+          return prevSeconds - 1;
+        } else {
+          setTimerMinutes((prevMinutes) => {
+            if (prevMinutes > 0) {
+              setTimerSeconds(59);
+              return prevMinutes - 1;
+            } else {
+              setTimerHours((prevHours) => {
+                if (prevHours > 0) {
+                  setTimerMinutes(59);
+                  setTimerSeconds(59);
+                  return prevHours - 1;
+                } else {
+                  setTimerDays((prevDays) => {
+                    if (prevDays > 0) {
+                      setTimerHours(23);
+                      setTimerMinutes(59);
+                      setTimerSeconds(59);
+                      return prevDays - 1;
+                    } else {
+                      setTimerDays(5);
+                      setTimerHours(23);
+                      setTimerMinutes(59);
+                      setTimerSeconds(59);
+                      return 0;
+                    }
+                  });
+                  return prevHours;
+                }
+              });
+              return prevMinutes;
+            }
+          });
+          return prevSeconds;
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="containerJbl">
@@ -43,19 +63,19 @@ export default function BoxJbl() {
         </h2>
         <div className="deadLine">
           <div>
-            <h4>23</h4>
+            <h4>{timerHours}</h4>
             <p>Hours</p>
           </div>
           <div>
-            <h4>05</h4>
+            <h4>{timerDays}</h4>
             <p>Days</p>
           </div>
           <div>
-            <h4>59</h4>
+            <h4>{timerMinutes}</h4>
             <p>Minutes</p>
           </div>
           <div>
-            <h4>35</h4>
+            <h4>{timerSeconds}</h4>
             <p>Seconds</p>
           </div>
         </div>
