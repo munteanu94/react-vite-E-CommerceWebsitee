@@ -10,47 +10,45 @@ export default function BoxJbl() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimerSeconds((prevSeconds) => {
-        if (prevSeconds > 0) {
-          return prevSeconds - 1;
+      if (timerSeconds > 0) {
+        setTimerSeconds(timerSeconds - 1);
+      } else {
+        if (timerMinutes > 0) {
+          setTimerMinutes(timerMinutes - 1);
+          setTimerSeconds(59);
         } else {
-          setTimerMinutes((prevMinutes) => {
-            if (prevMinutes > 0) {
+          if (timerHours > 0) {
+            setTimerHours(timerHours - 1);
+            setTimerMinutes(59);
+            setTimerSeconds(59);
+          } else {
+            if (timerDays > 0) {
+              setTimerDays(timerDays - 1);
+              setTimerHours(23);
+              setTimerMinutes(59);
               setTimerSeconds(59);
-              return prevMinutes - 1;
             } else {
-              setTimerHours((prevHours) => {
-                if (prevHours > 0) {
-                  setTimerMinutes(59);
-                  setTimerSeconds(59);
-                  return prevHours - 1;
-                } else {
-                  setTimerDays((prevDays) => {
-                    if (prevDays > 0) {
-                      setTimerHours(23);
-                      setTimerMinutes(59);
-                      setTimerSeconds(59);
-                      return prevDays - 1;
-                    } else {
-                      setTimerDays(5);
-                      setTimerHours(23);
-                      setTimerMinutes(59);
-                      setTimerSeconds(59);
-                      return 0;
-                    }
-                  });
-                  return prevHours;
-                }
-              });
-              return prevMinutes;
+              clearInterval(interval);
             }
-          });
-          return prevSeconds;
+          }
         }
-      });
+      }
     }, 1000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [timerDays, timerHours, timerMinutes, timerSeconds]);
+
+  useEffect(() => {
+    const resetTimer = () => {
+      setTimerDays(5);
+      setTimerHours(23);
+      setTimerMinutes(59);
+      setTimerSeconds(59);
+    };
+    window.addEventListener("focus", resetTimer);
+    return () => window.removeEventListener("focus", resetTimer);
   }, []);
 
   return (
