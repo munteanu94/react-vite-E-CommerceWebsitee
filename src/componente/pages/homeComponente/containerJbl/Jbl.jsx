@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 import imageJbl from "../containerJbl/jbl.png";
 import React, { useState, useEffect } from "react";
 import "./Jbl.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function BoxJbl() {
   const [timerDays, setTimerDays] = useState(5);
   const [timerHours, setTimerHours] = useState(23);
   const [timerMinutes, setTimerMinutes] = useState(59);
   const [timerSeconds, setTimerSeconds] = useState(59);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,19 +46,19 @@ export default function BoxJbl() {
     };
   }, [timerDays, timerHours, timerMinutes, timerSeconds]);
 
-  // useEffect(() => {
-  //   const resetTimer = () => {
-  //     setTimerDays(5);
-  //     setTimerHours(23);
-  //     setTimerMinutes(59);
-  //     setTimerSeconds(59);
-  //   };
-  //   window.addEventListener("focus", resetTimer);
-  //   return () => window.removeEventListener("focus", resetTimer);
-  // }, []);
+  useEffect(() => {
+    const resetTimer = () => {
+      setTimerDays(5);
+      setTimerHours(23);
+      setTimerMinutes(59);
+      setTimerSeconds(59);
+    };
+    window.addEventListener("focus", resetTimer);
+    return () => window.removeEventListener("focus", resetTimer);
+  }, []);
 
   return (
-    <div className="containerJbl">
+    <div className="containerJbl" data-aos="zoom-in">
       <div className="text">
         <h5>Categories</h5>
         <h2>
@@ -78,7 +84,9 @@ export default function BoxJbl() {
           </div>
         </div>
         <div className="ContainerBuyNow">
-          <Link className="bntBuynow">Buy Now</Link>
+          <Link to="/ViewAllProducts" className="bntBuynow">
+            Buy Now
+          </Link>
         </div>
       </div>
       <div className="image">

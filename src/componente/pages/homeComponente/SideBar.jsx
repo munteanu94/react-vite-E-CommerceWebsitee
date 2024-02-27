@@ -1,10 +1,12 @@
 import "./SideBar.css";
+
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosCloseCircle } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
 import { useState } from "react";
 import WomanFashion from "./subcompenet/Woman.jsx";
 import MenFashion from "./subcompenet/Man.jsx";
+
 export default function SideBar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [iconHide, setIconHide] = useState(false);

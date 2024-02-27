@@ -5,9 +5,15 @@ import Star from "../sectionSecond/subComponete/StarsFeedback.jsx";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import NewProducts from "./newProducts.jsx";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function OurProducts() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div className="containerOurProducts">
+    <div className="containerOurProducts" data-aos="zoom-out-left">
       <div>
         <div className="today">
           <div className="rectangle"></div>

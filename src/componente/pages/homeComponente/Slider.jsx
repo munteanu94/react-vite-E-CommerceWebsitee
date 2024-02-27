@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -8,9 +8,15 @@ import logo from "./imgSlider/logo.png";
 import { Link } from "react-router-dom";
 import { GoArrowRight } from "react-icons/go";
 import "./Slider.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 export default function Slider() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div className="containerSlider">
+    <div className="containerSlider" data-aos="fade-left">
       <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
         <SwiperSlide className="wrapperSlide">
           <div className="text">
@@ -22,7 +28,7 @@ export default function Slider() {
               UP to 10% <br /> off Voucher
             </h2>
             <div className="containerButton">
-              <Link className="pagesVoucer">
+              <Link to="/ViewAllProducts" className="pagesVoucer">
                 Shop Now <GoArrowRight className="arrowRight" />
               </Link>
             </div>

@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
-
+import { useEffect } from "react";
 import Footer from "./componente/footer/footer.jsx";
 import SideBar from "./componente/pages/homeComponente/SideBar.jsx";
 import Home from "./componente/pages/Home.jsx";
@@ -16,6 +16,7 @@ import MyAccount from "./componente/pages/myAccount/myAccount.jsx";
 import ProductDetail from "./componente/pages/ProdusDetail/ProductDitail.jsx";
 import AllProducts from "./componente/pages/AllProducts/AllProduscts.jsx";
 import ViewAllProducts from "./componente/pages/ViewAllProducts/ViewAllProducts.jsx";
+
 import "./App.css";
 import ShopContextProvider from "./componente/pages/homeComponente/sectionSecond/subComponete/Context.jsx";
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/react-vite-E-CommerceWebsitee/" element={<Home />} />
-            <Route path="/About" element={<About />} />
+            <Route data-aos="fade-up" path="/About" element={<About />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/SingUp" element={<SingUp />} />
             <Route path="/Carts" element={<Carts />} />

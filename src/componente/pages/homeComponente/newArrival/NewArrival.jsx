@@ -4,7 +4,13 @@ import type1 from "./image/type1.png";
 import type2 from "./image/type2.png";
 import type3 from "./image/type3.png";
 import type4 from "./image/type4.png";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function NewArrival() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div className="containerNewArrival">
       <div>
@@ -14,7 +20,7 @@ export default function NewArrival() {
         </div>
         <h2>Explore Our Products</h2>
       </div>
-      <div className="containerType">
+      <div className="containerType" data-aos="zoom-in">
         <div className="arrive1">
           <img src={type1} alt="type"></img>
           <div className="columnArrival">
@@ -24,10 +30,12 @@ export default function NewArrival() {
               <br />
               coming out on sale.
             </p>
-            <Link className="linkShop">Shop Now</Link>
+            <Link to="/ViewAllProducts" className="linkShop">
+              Shop Now
+            </Link>
           </div>
         </div>
-        <div className="arrive2">
+        <div className="arrive2" data-aos="zoom-in-up">
           <img src={type2} alt="type"></img>
           <div className="columnArrival">
             <h4>Women’s Collections</h4>
@@ -36,23 +44,29 @@ export default function NewArrival() {
               <br />
               give you another vibe.
             </p>
-            <Link className="linkShop">Shop Now</Link>
+            <Link to="/ViewAllProducts" className="linkShop">
+              Shop Now
+            </Link>
           </div>
         </div>
-        <div className="arrive3">
+        <div className="arrive3" data-aos="zoom-in-down">
           <img src={type3} alt="type"></img>
           <div className="columnArrival">
             <h4>Speakers</h4>
             <p>Amazon wireless speakers</p>
-            <Link className="linkShop">Shop Now</Link>
+            <Link to="/ViewAllProducts" className="linkShop">
+              Shop Now
+            </Link>
           </div>
         </div>
-        <div className="arrive4">
+        <div className="arrive4" data-aos="zoom-in-left">
           <img src={type4} alt="type"></img>
           <div className="columnArrival">
             <h4>Perfume</h4>
             <p>GUCCI INTENSE OUD EDP</p>
-            <Link className="linkShop">Shop Now</Link>
+            <Link to="/ViewAllProducts" className="linkShop">
+              Shop Now
+            </Link>
           </div>
         </div>
       </div>

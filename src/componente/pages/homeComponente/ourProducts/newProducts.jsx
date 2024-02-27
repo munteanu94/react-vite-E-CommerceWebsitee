@@ -3,10 +3,15 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { newProducts } from "./lisOurProducts.js";
 import "./ourProducts.css";
-
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function NewProducts() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div className="containerNewProducts">
+    <div className="containerNewProducts" data-aos="zoom-out-right">
       {newProducts.map((user) => (
         <div key={user.id}>
           <div className="sliderCart">

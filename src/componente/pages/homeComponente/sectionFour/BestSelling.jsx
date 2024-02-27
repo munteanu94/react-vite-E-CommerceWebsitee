@@ -4,9 +4,15 @@ import { FaStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
 import { BestProducts } from "./bestProducts.js";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 export default function BestSelling() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div className="ContainerBestSelling">
+    <div className="ContainerBestSelling" data-aos="flip-up">
       <div className="containerFirst">
         <div>
           <div className="today">
